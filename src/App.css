@@ -66,9 +66,16 @@ footer {
 .social-links {
   margin-top: 1rem;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
 
 .social-links a svg {
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -78,3 +85,4 @@ footer {
   transform: scale(1.2);
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
 }
+
