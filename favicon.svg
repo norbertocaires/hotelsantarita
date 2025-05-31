@@ -1,0 +1,5 @@
+<!-- Salve como favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+  <rect width="64" height="64" fill="#2c3e50"/>
+  <text x="50%" y="50%" font-size="32" fill="white" font-family="Arial, sans-serif" dominant-baseline="middle" text-anchor="middle">H</text>
+</svg>
