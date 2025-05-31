@@ -3,14 +3,14 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches:
-      - master   # altere para sua branch principal, ex: master, se for o caso
+      - master  # ou master, dependendo do seu repositório
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -21,11 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Angular project
-        run: npm run build -- --prod --output-path=dist
+      - name: Build Angular app
+        run: npm run build -- --configuration production
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist/hotel-santa-rita
