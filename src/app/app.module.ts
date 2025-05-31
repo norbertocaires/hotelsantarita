@@ -7,8 +7,8 @@ import { InfoComponent } from './components/info/info.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InfoComponent
+    // AppComponent,
+    // InfoComponent
   ],
   imports: [
     BrowserModule,
