@@ -37,7 +37,6 @@ function App() {
         <h2>📞 Contato</h2>
         <p><strong>Endereço:</strong> Rua Professora Santa Vieira de Castro, 117, Centro</p>
         <p><strong>Telefone:</strong> (77) 3450-1237</p>
-        <p><strong>Email:</strong> contato@hotelsantarita.com.br</p>
       </section>
 
       <footer>
