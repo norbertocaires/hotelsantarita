@@ -64,6 +64,23 @@ function App() {
           </div>
         </section>
 
+        <section id="localizacao" className="section">
+          <h2>Localização</h2>
+          <p className="address">{hotelInfo.endereco}</p>
+          <div className="map-wrap">
+            <iframe
+              title={`Localização ${hotelInfo.nome}`}
+              src={hotelInfo.mapaEmbedUrl}
+              width="100%"
+              height="320"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </section>
+
         <section id="contato" className="section contact-section">
           <h2>Fale com a gente</h2>
           <p className="section-lead">
@@ -105,22 +122,6 @@ function App() {
           </div>
         </section>
 
-        <section id="localizacao" className="section">
-          <h2>Localização</h2>
-          <p className="address">{hotelInfo.endereco}</p>
-          <div className="map-wrap">
-            <iframe
-              title={`Localização ${hotelInfo.nome}`}
-              src={hotelInfo.mapaEmbedUrl}
-              width="100%"
-              height="320"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </section>
       </main>
 
       <footer className="site-footer">
