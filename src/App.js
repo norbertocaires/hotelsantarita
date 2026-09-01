@@ -3,15 +3,6 @@ import WhatsAppIcon from './icons/WhatsAppIcon';
 import InstagramIcon from './icons/InstagramIcon';
 import './App.css';
 
-const AMENITIES = [
-  { icon: '📶', label: 'Wi-Fi gratuito' },
-  { icon: '❄️', label: 'Ar-condicionado' },
-  { icon: '☕', label: 'Café da manhã' },
-  { icon: '🅿️', label: 'Estacionamento' },
-  { icon: '🛎️', label: 'Recepção 24h' },
-  { icon: '🛏️', label: 'Roupa de cama e toalhas' },
-];
-
 function App() {
   const year = new Date().getFullYear();
 
@@ -20,8 +11,6 @@ function App() {
       <header className="site-header">
         <span className="brand">Hotel Santa Rita</span>
         <nav className="site-nav">
-          <a href="#sobre">Sobre</a>
-          <a href="#comodidades">Comodidades</a>
           <a href="#localizacao">Localização</a>
           <a href="#contato">Contato</a>
         </nav>
@@ -32,7 +21,7 @@ function App() {
           <div className="hero-inner">
             <p className="eyebrow">Bem-vindo ao</p>
             <h1>Hotel Santa Rita</h1>
-            <p className="tagline">Sua casa fora de casa, no coração da cidade.</p>
+            <p className="tagline">Sua casa fora de casa.</p>
             <div className="hero-actions">
               <a
                 className="btn btn-primary"
@@ -47,30 +36,6 @@ function App() {
               </a>
             </div>
           </div>
-        </section>
-
-        <section id="sobre" className="section">
-          <h2>Sobre o hotel</h2>
-          <p>
-            O Hotel Santa Rita oferece acomodações simples, limpas e confortáveis
-            para quem visita a cidade a trabalho ou a lazer. Estamos localizados
-            no centro, próximos ao comércio, restaurantes e serviços, com
-            atendimento acolhedor e familiar.
-          </p>
-        </section>
-
-        <section id="comodidades" className="section">
-          <h2>Comodidades</h2>
-          <ul className="amenities">
-            {AMENITIES.map((item) => (
-              <li key={item.label}>
-                <span className="amenity-icon" aria-hidden="true">
-                  {item.icon}
-                </span>
-                {item.label}
-              </li>
-            ))}
-          </ul>
         </section>
 
         <section id="localizacao" className="section">
