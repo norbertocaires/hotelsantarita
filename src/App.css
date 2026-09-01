@@ -1,12 +1,14 @@
 :root {
-  --bg: #faf6f0;
-  --surface: #ffffff;
-  --ink: #2f2a24;
-  --muted: #6b6259;
-  --line: #e6ded2;
-  --primary: #1f5c46;
-  --primary-dark: #17442f;
-  --accent: #b5893f;
+  /* Paleta baseada na logo do hotel: bege, azul-céu e terracota */
+  --bg: #f5efe3;
+  --surface: #fffdf8;
+  --ink: #40372b;
+  --muted: #7a6d5b;
+  --line: #e7dcc7;
+  --primary: #a8623c;
+  --primary-dark: #854a2c;
+  --accent: #6fa8c4;
+  --sky: #9fcfe4;
   --whatsapp: #25d366;
   --whatsapp-dark: #128c7e;
 }
@@ -90,8 +92,8 @@ a {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  color: #f6f1e7;
+  background: linear-gradient(135deg, #6d3f27, var(--primary) 55%, #b9744a);
+  color: #fbf3e8;
   padding: 5rem 1.5rem;
   text-align: center;
 }
@@ -106,7 +108,7 @@ a {
   letter-spacing: 0.25em;
   font-size: 0.8rem;
   margin: 0 0 0.5rem;
-  color: var(--accent);
+  color: var(--sky);
 }
 
 .hero h1 {
@@ -118,7 +120,7 @@ a {
 .tagline {
   font-size: 1.15rem;
   margin: 0 0 2rem;
-  color: #e8e0d2;
+  color: #f0e3d3;
 }
 
 .hero-actions {
@@ -172,6 +174,9 @@ a {
   font-size: 1.7rem;
   color: var(--primary-dark);
   margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
 }
 
 .section-lead {
