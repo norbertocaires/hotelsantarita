@@ -1,9 +1,10 @@
 // src/icons/WhatsAppIcon.jsx
 import React from 'react';
+import hotelInfo from '../hotelInfo';
 
-const WhatsAppIcon = ({ size = 32 }) => (
+const WhatsAppIcon = () => (
     <a
-        href="https://wa.me/5577998237355"
+        href={hotelInfo.whatsapp.link}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"

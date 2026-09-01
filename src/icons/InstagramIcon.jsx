@@ -1,9 +1,10 @@
 // src/icons/InstagramIcon.jsx
 import React from 'react';
+import hotelInfo from '../hotelInfo';
 
-const InstagramIcon = ({ size = 32 }) => (
+const InstagramIcon = () => (
     <a
-        href="https://instagram.com/hotel.santa.rita"
+        href={hotelInfo.instagram.link}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
