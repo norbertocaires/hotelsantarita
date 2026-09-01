@@ -14,6 +14,24 @@ function App() {
         <nav className="site-nav">
           <a href="#localizacao">Localização</a>
           <a href="#contato">Contato</a>
+          <a
+            className="nav-social"
+            href={hotelInfo.whatsapp.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <WhatsAppIcon size={22} />
+          </a>
+          <a
+            className="nav-social"
+            href={hotelInfo.instagram.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <InstagramIcon size={22} />
+          </a>
         </nav>
       </header>
 
@@ -25,17 +43,65 @@ function App() {
             <p className="tagline">{hotelInfo.slogan}</p>
             <div className="hero-actions">
               <a
-                className="btn btn-primary"
+                className="btn btn-whatsapp"
                 href={hotelInfo.whatsapp.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <WhatsAppIcon size={22} color="#fff" />
                 Reservar pelo WhatsApp
               </a>
-              <a className="btn btn-ghost" href="#localizacao">
-                Ver localização
+              <a
+                className="btn btn-instagram"
+                href={hotelInfo.instagram.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon size={22} color="#fff" />
+                Ver no Instagram
               </a>
             </div>
+          </div>
+        </section>
+
+        <section id="contato" className="section contact-section">
+          <h2>Fale com a gente</h2>
+          <p className="section-lead">
+            Reservas e dúvidas pelo WhatsApp ou Instagram — respondemos rápido.
+          </p>
+
+          <div className="social-cards">
+            <a
+              className="social-card whatsapp"
+              href={hotelInfo.whatsapp.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsAppIcon size={40} color="#fff" />
+              <span className="social-card-label">WhatsApp</span>
+              <span className="social-card-value">{hotelInfo.whatsapp.exibicao}</span>
+            </a>
+            <a
+              className="social-card instagram"
+              href={hotelInfo.instagram.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon size={40} color="#fff" />
+              <span className="social-card-label">Instagram</span>
+              <span className="social-card-value">{hotelInfo.instagram.exibicao}</span>
+            </a>
+          </div>
+
+          <div className="contact-grid">
+            <p>
+              <strong>Telefone</strong>
+              <a href={hotelInfo.telefone.link}>{hotelInfo.telefone.exibicao}</a>
+            </p>
+            <p>
+              <strong>Endereço</strong>
+              <span>{hotelInfo.endereco}</span>
+            </p>
           </div>
         </section>
 
@@ -55,39 +121,21 @@ function App() {
             />
           </div>
         </section>
-
-        <section id="contato" className="section">
-          <h2>Contato</h2>
-          <div className="contact-grid">
-            <p>
-              <strong>Telefone</strong>
-              <a href={hotelInfo.telefone.link}>{hotelInfo.telefone.exibicao}</a>
-            </p>
-            <p>
-              <strong>WhatsApp</strong>
-              <a
-                href={hotelInfo.whatsapp.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {hotelInfo.whatsapp.exibicao}
-              </a>
-            </p>
-            <p>
-              <strong>Endereço</strong>
-              <span>{hotelInfo.endereco}</span>
-            </p>
-          </div>
-          <div className="social">
-            <WhatsAppIcon />
-            <InstagramIcon />
-          </div>
-        </section>
       </main>
 
       <footer className="site-footer">
         <p>&copy; {year} {hotelInfo.nome} — Todos os direitos reservados</p>
       </footer>
+
+      <a
+        className="whatsapp-float"
+        href={hotelInfo.whatsapp.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar no WhatsApp"
+      >
+        <WhatsAppIcon size={30} color="#fff" />
+      </a>
     </div>
   );
 }
